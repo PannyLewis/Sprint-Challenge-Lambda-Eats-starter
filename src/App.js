@@ -12,7 +12,7 @@ const App = () => {
           <h1>Lambda Eats</h1>
         </div>
       </Route>
-      <Route path="/form">
+      <Route path="/pizza">
         <Pizza />
       </Route>
     </>
