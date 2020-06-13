@@ -13,8 +13,20 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your Team Lead.
 
 1. In 1-2 sentences, explain what React's `useRouteMatch` hook is used for.
+   Provides access to the match object
+   If it is provided with no arguments, it returns the closest match in the component or its parents.
+   A primary use case would be to construct nested paths.
+   from https://css-tricks.com/the-hooks-of-react-router/
+
 2. How would you explain form validation to someone who has never programmed before?
+   Validation is an automatic check to ensure that data entered is sensible and feasible. Validation cannot ensure data is accurate. When programming, it is important that you include validation for data inputs. This stops unexpected or abnormal data from crashing your program and prevents you from receiving impossible garbage outputs.
+   from https://www.computerscience.gcse.guru/theory/validation
+   Before submitting data to the server, it is important to ensure all required form controls are filled out, in the correct format. This is called client-side form validation, and helps ensure data submitted matches the requirements set forth in the various form controls. This article leads you through basic concepts and examples of client-side form validation. Client-side validation is an initial check and an important feature of good user experience; by catching invalid data on the client-side, the user can fix it straight away. If it gets to the server and is then rejected, a noticeable delay is caused by a round trip to the server and then back to the client-side to tell the user to fix their data.
+   from https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation
+
 3. In 1-2 sentences, define end to end testing.
+   Just as it sounds: test from start to finish. End-to-end testing is a technique used to test whether the flow of an application right from start to finish is behaving as expected. The purpose of performing end-to-end testing is to identify system dependencies and to ensure that the data integrity is maintained between various system components and systems. The entire application is tested for critical functionalities such as communicating with the other systems, interfaces, database, network, and other applications.
+   from https://www.tutorialspoint.com/software_testing_dictionary/end_to_end_testing.htm#:~:text=End%2Dto%2Dend%20testing%20is,various%20system%20components%20and%20systems.
 
 You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section **will** prevent you from passing this challenge.
 
@@ -101,3 +113,5 @@ Follow these steps for completing your project.
 ## Grading rubric
 
 [NEED TO ADD: Sprint challenge grading rubric](https://www.notion.so/e7b32e56ebad4f57b3521efb886f4508)
+
+cloned and branched 06/13/2020 pnl
