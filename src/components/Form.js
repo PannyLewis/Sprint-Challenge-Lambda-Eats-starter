@@ -133,6 +133,7 @@ function Form() {
         <input
           type="checkbox"
           name="pepperoni"
+          data-cy="checkbox"
           id="terms"
           checked={formState.pepperoni}
           onChange={inputChange}
@@ -144,6 +145,7 @@ function Form() {
         <input
           type="checkbox"
           name="sausage"
+          data-cy="checkbox"
           id="terms"
           checked={formState.sausage}
           onChange={inputChange}
@@ -155,6 +157,7 @@ function Form() {
         <input
           type="checkbox"
           name="bacon"
+          data-cy="checkbox"
           id="terms"
           checked={formState.bacon}
           onChange={inputChange}
@@ -166,6 +169,7 @@ function Form() {
         <input
           type="checkbox"
           name="anchovies"
+          data-cy="checkbox"
           id="terms"
           checked={formState.anchovies}
           onChange={inputChange}
@@ -188,7 +192,9 @@ function Form() {
       {/* displaying our post request data */}
 
       {/* <pre>{JSON.stringify(post, null, 2)}</pre> */}
-      <button disabled={buttonDisabled}>Order</button>
+      <button data-cy="submit" disabled={buttonDisabled}>
+        Order
+      </button>
     </form>
   );
 }
