@@ -192,7 +192,7 @@ function Form() {
       {/* displaying our post request data */}
 
       {/* <pre>{JSON.stringify(post, null, 2)}</pre> */}
-      <button data-cy="submit" disabled={buttonDisabled}>
+      <button data-cy="order" disabled={buttonDisabled}>
         Order
       </button>
     </form>
