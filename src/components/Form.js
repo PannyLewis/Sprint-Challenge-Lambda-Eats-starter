@@ -5,9 +5,12 @@ import * as yup from "yup";
 // yup help with validation
 const formSchema = yup.object().shape({
   name: yup.string().required("Name is a required field."),
-  email: yup.string().email().required("Must be a valid email address."),
-  password: yup.string().required(),
-  terms: yup.boolean().oneOf([true]),
+  size: yup.string(),
+  pepperoni: yup.boolean().oneOf([true]),
+  sausage: yup.boolean().oneOf([true]),
+  bacon: yup.boolean().oneOf([true]),
+  anchovies: yup.boolean().oneOf([true]),
+  instructions: yup.string(),
 });
 
 function Form() {
@@ -68,7 +71,7 @@ function Form() {
   };
 
   // this makes it so that whatever the user types in will be saved as values:
-  const inputChanges = (e) => {
+  const inputChange = (e) => {
     // console.log("show input", e.target.value);
     e.persist();
     let value =
@@ -112,7 +115,7 @@ function Form() {
           name="name" /* name is computed key:value in [event.target.name]: event.target.value  */
           id="name"
           value={formState.name}
-          onChange={inputChanges}
+          onChange={inputChange}
         />
         {errors.name.length > 0 ? <p className="error">{errors.name}</p> : null}
       </label>
@@ -132,7 +135,7 @@ function Form() {
           name="pepperoni"
           id="terms"
           checked={formState.pepperoni}
-          onChange={inputChanges}
+          onChange={inputChange}
         />
         pepperoni
       </label>
@@ -143,7 +146,7 @@ function Form() {
           name="sausage"
           id="terms"
           checked={formState.sausage}
-          onChange={inputChanges}
+          onChange={inputChange}
         />
         sausage
       </label>
@@ -154,7 +157,7 @@ function Form() {
           name="bacon"
           id="terms"
           checked={formState.bacon}
-          onChange={inputChanges}
+          onChange={inputChange}
         />
         bacon
       </label>
@@ -165,7 +168,7 @@ function Form() {
           name="anchovies"
           id="terms"
           checked={formState.anchovies}
-          onChange={inputChanges}
+          onChange={inputChange}
         />
         anchovies
       </label>
