@@ -13,8 +13,20 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your Team Lead.
 
 1. In 1-2 sentences, explain what React's `useRouteMatch` hook is used for.
+   Provides access to the match object
+   If it is provided with no arguments, it returns the closest match in the component or its parents.
+   A primary use case would be to construct nested paths.
+   from https://css-tricks.com/the-hooks-of-react-router/
+
 2. How would you explain form validation to someone who has never programmed before?
+   Validation is an automatic check to ensure that data entered is sensible and feasible. Validation cannot ensure data is accurate. When programming, it is important that you include validation for data inputs. This stops unexpected or abnormal data from crashing your program and prevents you from receiving impossible garbage outputs.
+   from https://www.computerscience.gcse.guru/theory/validation
+   Before submitting data to the server, it is important to ensure all required form controls are filled out, in the correct format. This is called client-side form validation, and helps ensure data submitted matches the requirements set forth in the various form controls. This article leads you through basic concepts and examples of client-side form validation. Client-side validation is an initial check and an important feature of good user experience; by catching invalid data on the client-side, the user can fix it straight away. If it gets to the server and is then rejected, a noticeable delay is caused by a round trip to the server and then back to the client-side to tell the user to fix their data.
+   from https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation
+
 3. In 1-2 sentences, define end to end testing.
+   Just as it sounds: test from start to finish. End-to-end testing is a technique used to test whether the flow of an application right from start to finish is behaving as expected. The purpose of performing end-to-end testing is to identify system dependencies and to ensure that the data integrity is maintained between various system components and systems. The entire application is tested for critical functionalities such as communicating with the other systems, interfaces, database, network, and other applications.
+   from https://www.tutorialspoint.com/software_testing_dictionary/end_to_end_testing.htm#:~:text=End%2Dto%2Dend%20testing%20is,various%20system%20components%20and%20systems.
 
 You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section **will** prevent you from passing this challenge.
 
@@ -24,35 +36,37 @@ You are expected to be able to answer all these questions. Your responses contri
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add your project manager as collaborator on Github.
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!).
-- [ ] CD into the project base directory.
-- [ ] Download project dependencies by running `npm install`
-- [ ] Start up the app using `npm start`
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`. Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [x] Create a forked copy of this project.
+- [x] Add your project manager as collaborator on Github.
+- [x] Clone your OWN version of the repository (Not Lambda's by mistake!).
+- [x] CD into the project base directory.
+- [x] Download project dependencies by running `npm install`
+- [x] Start up the app using `npm start`
+- [x] Create a new branch: git checkout -b `<firstName-lastName>`. Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+- [x] Push commits: git push origin `<firstName-lastName>`.
 
 ### Task 2: Minimum Viable Product
 
 Your MVP should include, at a minimum, the following components.
 
-- [ ] A homepage that has a "/" route and links to your form (button, nav bar, or any other type of link is acceptable)
-- [ ] A form with a "/pizza" route
-- [ ] A name text input field
-- [ ] Validation for name - name must be at least 2 characters
-- [ ] Dropdown form component for pizza size
-- [ ] Checklist form component for toppings - at least 4 (hint: name each separately!)
-- [ ] Text input form component for special instructions
-- [ ] An Add to Order button that submits form and returns a database record of name, pizza size, sauce, and special instructions
+- [x] A homepage that has a "/" route and links to your form (button, nav bar, or any other type of link is acceptable)
+      npm install --save react-router-dom
+      https://www.npmjs.com/package/react-router-dom
+- [x] A form with a "/pizza" route
+- [x] A name text input field
+- [x] Validation for name - name must be at least 2 characters
+- [x] Dropdown form component for pizza size
+- [x] Checklist form component for toppings - at least 4 (hint: name each separately!)
+- [x] Text input form component for special instructions
+- [x] An Add to Order button that submits form and returns a database record of name, pizza size, sauce, and special instructions
 
 #### Testing MVP
 
 Implement the following tests in Cypress:
 
-- [ ] test that you can add text to the box
-- [ ] test that you can select multiple toppings
-- [ ] test that you can submit the form
+- [x] test that you can add text to the box
+- [x] test that you can select multiple toppings
+- [x] test that you can submit the form
 
 You may use the following wireframe (also in a folder above) as guidance as you design your site but it is not required that you do so.
 
@@ -101,3 +115,5 @@ Follow these steps for completing your project.
 ## Grading rubric
 
 [NEED TO ADD: Sprint challenge grading rubric](https://www.notion.so/e7b32e56ebad4f57b3521efb886f4508)
+
+cloned and branched 06/13/2020 pnl
