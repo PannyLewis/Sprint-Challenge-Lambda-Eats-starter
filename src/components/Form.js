@@ -4,12 +4,16 @@ import * as yup from "yup";
 
 // yup help with validation
 const formSchema = yup.object().shape({
-  name: yup.string().required("Name is a required field."),
+  name: yup
+    .string()
+    .min(2, "name must be at least 2 characters")
+    .required("Name is a required field."),
   size: yup.string(),
-  pepperoni: yup.boolean().oneOf([true]),
-  sausage: yup.boolean().oneOf([true]),
-  bacon: yup.boolean().oneOf([true]),
-  anchovies: yup.boolean().oneOf([true]),
+  // I wanted the toppings to be optional so I chose .string() ver .boulean().onoftrue().  The boolean validation made it a requirement for user to check all boxes, so it had to be removed.
+  pepperoni: yup.string(),
+  sausage: yup.string(),
+  bacon: yup.string(),
+  anchovies: yup.string(),
   instructions: yup.string(),
 });
 
@@ -18,10 +22,10 @@ function Form() {
   const [formState, setFormState] = useState({
     name: "",
     size: "",
-    pepperoni: false,
-    sausage: false,
-    bacon: false,
-    anchovies: false,
+    pepperoni: "",
+    sausage: "",
+    bacon: "",
+    anchovies: "",
     instructions: "",
   });
 
@@ -107,7 +111,7 @@ function Form() {
   };
 
   return (
-    <form>
+    <form onSubmit={formSubmit}>
       <label>
         What is your name?
         <input
@@ -123,6 +127,7 @@ function Form() {
       <label htmlFor="size">
         What size pizza would you like?
         <select id="size" name="size" onChange={inputChange}>
+          <option value="null">Select ...</option>
           <option value="small">small</option>
           <option value="medium">medium</option>
           <option value="large">large</option>
@@ -130,6 +135,7 @@ function Form() {
       </label>
 
       <label>
+        Your choice of meat toppings
         <input
           type="checkbox"
           name="pepperoni"
@@ -189,12 +195,12 @@ function Form() {
         ) : null}
       </label>
 
-      {/* displaying our post request data */}
-
-      {/* <pre>{JSON.stringify(post, null, 2)}</pre> */}
       <button data-cy="order" disabled={buttonDisabled}>
-        Order
+        Place order
       </button>
+
+      {/* displaying our post request data */}
+      <pre>Please review your order: {JSON.stringify(post, null, 2)}</pre>
     </form>
   );
 }
